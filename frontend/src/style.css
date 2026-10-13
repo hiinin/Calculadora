@@ -1,0 +1,34 @@
+@import 'tailwindcss';
+
+/*
+ * Tailwind v4: o tema é configurado em CSS com @theme (não há tailwind.config.js).
+ * Cada variável vira utilitários, ex.: --color-key-operator -> bg-key-operator.
+ */
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
+
+  /* Paleta inspirada no app Calculadora do iOS */
+  --color-key-digit: #333333;
+  --color-key-digit-active: #737373;
+  --color-key-function: #a5a5a5;
+  --color-key-function-active: #d9d9d9;
+  --color-key-operator: #ff9f0a;
+  --color-key-operator-active: #fcc78a;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  /* evita seleção/zoom acidental ao tocar rápido nas teclas */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
